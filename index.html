@@ -441,6 +441,45 @@
     .step h3 { margin: 12px 0 8px; font-size: 16px; }
     .step p { color: #b7c7de; font-size: 14px; }
 
+    /* CLIENTS */
+    .clients { background: var(--paper); }
+    .clients-head { margin-bottom: 36px; }
+    .client-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+    .client-card {
+      border: 1px solid var(--line);
+      background: #fff;
+      min-height: 120px;
+      padding: 22px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .client-card span {
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--cyan);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .client-card strong {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1.2;
+    }
+    .client-card em {
+      font-style: normal;
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+
     /* CONTACT */
     .contact-grid {
       display: grid;
@@ -580,7 +619,7 @@
         border-bottom: 1px solid var(--line);
       }
       nav ul.open { display: flex; }
-      .about-grid, .work-grid, .split-rental, .asset-layout, .asset-panel.active, .contact-grid, .steps, .about-points, .footer-main {
+      .about-grid, .work-grid, .split-rental, .asset-layout, .asset-panel.active, .contact-grid, .steps, .about-points, .footer-main, .client-grid {
         grid-template-columns: 1fr;
       }
       .work-card.tall { min-height: 360px; grid-row: auto; }
@@ -590,6 +629,9 @@
       .asset-nav button.active { border-bottom-color: var(--bronze); }
       .hero-meta { gap: 20px; flex-wrap: wrap; }
       section { padding: 72px 0; }
+    }
+    @media (min-width: 700px) and (max-width: 980px) {
+      .client-grid { grid-template-columns: 1fr 1fr; }
     }
   </style>
 </head>
@@ -617,6 +659,7 @@
           <li><a href="#infrastructure">Infrastructure</a></li>
           <li><a href="#rental">Rental</a></li>
           <li><a href="#supply">Asset Supply</a></li>
+          <li><a href="#clients">Clients</a></li>
           <li><a href="#contact">Contact</a></li>
           <li><a href="#footer" class="btn btn-dark">Office</a></li>
         </ul>
@@ -753,7 +796,7 @@
       <div class="assets-intro">
         <p class="sec-label">C · Asset supply & services</p>
         <h2>Catalogue-grade supply for sites, offices, and labs.</h2>
-        <p class="lede">Construction hardware, electrical, office systems, medical, safety, and packaging — sourced and delivered as a single line of supply.</p>
+        <p class="lede">Construction hardware, electrical, office systems, medical, safety, and packaging & material handling — sourced and delivered as a single line of supply.</p>
       </div>
       <div class="asset-layout">
         <div class="asset-nav" id="assetNav">
@@ -762,7 +805,7 @@
           <button data-tab="2">Office supplies</button>
           <button data-tab="3">Medical lab & supplies</button>
           <button data-tab="4">Safety supplies</button>
-          <button data-tab="5">Packaging & material</button>
+          <button data-tab="5">Packaging & material handling</button>
         </div>
         <div>
           <div class="asset-panel active" data-panel="0">
@@ -820,13 +863,16 @@
             </div>
           </div>
           <div class="asset-panel" data-panel="5">
-            <img src="https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?auto=format&fit=crop&w=1000&q=80" alt="Packaging and materials" />
+            <img src="https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?auto=format&fit=crop&w=1000&q=80" alt="Packaging and material handling" />
             <div class="asset-body">
-              <h3>Packaging & Material</h3>
-              <p>Packaging solutions and industrial material, sourced to order for dispatch and storage.</p>
+              <h3>Packaging & Material Handling</h3>
+              <p>Packaging and handling equipment for storage, dispatch, and warehouse movement.</p>
               <div class="chips">
-                <span>Packaging solutions</span><span>Industrial material</span><span>On-demand sourcing</span>
+                <span>Storage bins</span><span>Ladders</span><span>Packaging boxes</span>
+                <span>Trolleys</span><span>Packaging rolls</span>
               </div>
+            </div>
+          </div>
             </div>
           </div>
         </div>
@@ -858,6 +904,47 @@
           <em>04</em>
           <h3>Hand over & support</h3>
           <p>IT, campaign, and ongoing supply support so the operation does not stall after opening.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="clients" id="clients">
+    <div class="wrap">
+      <div class="clients-head">
+        <p class="sec-label">Partnerships</p>
+        <h2>Our valuable clients</h2>
+        <p class="lede">Teams and brands we have worked with across healthcare, consulting, hospitality, food, and marketing.</p>
+      </div>
+      <div class="client-grid">
+        <article class="client-card">
+          <span>Healthcare</span>
+          <strong>Tata 1mg Healthcare</strong>
+        </article>
+        <article class="client-card">
+          <span>Technology</span>
+          <strong>Tata 1mg Technologies</strong>
+        </article>
+        <article class="client-card">
+          <span>Consulting</span>
+          <strong>Jarvis Consulting</strong>
+        </article>
+        <article class="client-card">
+          <span>Beauty</span>
+          <strong>Khoobsurat Makeovers</strong>
+        </article>
+        <article class="client-card">
+          <span>Food</span>
+          <strong>Lifestyle Foods</strong>
+          <em>Chuk De Masale</em>
+        </article>
+        <article class="client-card">
+          <span>Marketing</span>
+          <strong>Contact 360 Marketing</strong>
+        </article>
+        <article class="client-card">
+          <span>Hospitality</span>
+          <strong>BBQ</strong>
         </article>
       </div>
     </div>
@@ -927,6 +1014,7 @@
           <li><a href="#infrastructure">Infrastructure</a></li>
           <li><a href="#rental">Rental</a></li>
           <li><a href="#supply">Asset supply</a></li>
+          <li><a href="#clients">Clients</a></li>
           <li><a href="#contact">Enquire</a></li>
         </ul>
       </div>
